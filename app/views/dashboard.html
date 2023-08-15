@@ -9,9 +9,17 @@
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "Dashboard",
+        href: "/dashboard"
+      }
+    ]
   }) }}
 {% endblock %}
 
@@ -24,7 +32,9 @@
         {{ serviceName }}
       </h1>
 
-      <p>Lorem ipsum dolor sit amet, commodo veniam occaecat culpa enim tempor tempor cillum irure laborum officia nulla fugiat.</p>
+      <p>Use this service to manage the list of products that you move into Northern Ireland,
+        to get your goods classification accredited by HMRC specialists
+        and to ensure that your profile stays up to date as things change.</p>
 
     </div>
   </div>

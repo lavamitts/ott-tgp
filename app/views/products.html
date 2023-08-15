@@ -9,28 +9,39 @@
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "My products",
+        href: "/products"
+      }
+    ]
   }) }}
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-three-quarters">
 
       <span class="govuk-caption-xl">{{ serviceName }}</span>
       <h1 class="govuk-heading-xl">
         My products
       </h1>
+      <p class="govuk-body-l">The table below lists all the products that you have stored
+        in your trader goods profile. Check that each of your products has a suitable
+        commodity code assigned to it, to reduce the amount of paperwork for goods entering
+        Northern Ireland.</p>
     </div>
   </div>
   <div class="govuk-grid-row govuk-!-static-margin-top-6">
     <div class="govuk-grid-column-full">
       {% include "partials/filter.html" %}
       <table class="govuk-table govuk-table--s">
-        {# <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> #}
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Product description</th>

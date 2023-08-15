@@ -13,6 +13,7 @@
 .govuk-phase-banner__content__tag__green {
     background-color: #283 !important
 }
+
 .govuk-phase-banner__content__tag__red {
     background-color: #c22 !important
 }
@@ -32,5 +33,23 @@
         strong.govuk-tag {
             font-size: 12px !important;
         }
+    }
+}
+
+table.govuk-table {
+    dl {
+        margin : 0px;
+        padding: 0px;
+    }
+
+    dt {
+        font-weight: bold !important;
+        margin     : 0px;
+    }
+
+    dd {
+        margin-left  : 0px;
+        padding-left : 0px;
+        margin-bottom: 0.5em;
     }
 }

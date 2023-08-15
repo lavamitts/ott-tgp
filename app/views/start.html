@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Manage your Trader Goods Profile – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -15,19 +15,28 @@
     items: [
       {
         text: "Home",
-        href: "#"
+        href: "https://www.gov.uk/"
       },
       {
-        text: "Section",
-        href: "#"
+        text: "Business and self-employed",
+        href: "https://www.gov.uk/browse/business"
       },
       {
-        text: "Subsection"
+        text: "Importing",
+        href: "https://www.gov.uk/browse/business/imports"
       }
     ]
   }) }}
 
 {% endblock %}
+
+
+
+    Home
+    
+    
+
+
 
 {% block content %}
 
@@ -66,9 +75,9 @@
         The online service is also <a href="#">available in Welsh (ar gael yn Gymraeg)</a>.
       </p>
 
-      <p>
+      {# <p>
         You can’t register for this service if you’re in the UK illegally.
-      </p>
+      </p> #}
 
     </div>
 
@@ -81,20 +90,20 @@
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
             <li>
-              <a href="#">
-                Related link
+              <a href="https://www.gov.uk/government/publications/the-windsor-framework">
+                 The Windsor Framework
               </a>
             </li>
             <li>
-              <a href="#">
-                Related link
+              <a href="https://www.gov.uk/government/collections/the-windsor-framework-further-detail-and-publications">
+                 The Windsor Framework - further detail and publications 
               </a>
             </li>
-            <li>
+            {# <li>
               <a href="#" class="govuk-!-font-weight-bold">
                 More <span class="govuk-visually-hidden">in Subsection</span>
               </a>
-            </li>
+            </li> #}
           </ul>
         </nav>
       </aside>

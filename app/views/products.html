@@ -1,0 +1,137 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  My products – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">{{ serviceName }}</span>
+      <h1 class="govuk-heading-xl">
+        My products
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-static-margin-top-6">
+    <div class="govuk-grid-column-full">
+      {% include "partials/filter.html" %}
+      <table class="govuk-table govuk-table--s">
+        {# <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> #}
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Product description</th>
+            <th scope="col" class="govuk-table__header">Commodity code</th>
+            <th scope="col" class="govuk-table__header">Origin</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header">Notifications</th>
+            <th scope="col" class="govuk-table__header">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Jarlsberg original (190g)</td>
+            <td class="govuk-table__cell nw">
+              <a target="_blank" href="http://www.trade-tariff.service.gov.uk/search?q=040690">0406 90</a>
+            </td>
+            <td class="govuk-table__cell">Norway (NO)</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-phase-banner__content__tag">
+                Pending
+              </strong>
+            </td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">
+              <a href="">View or edit</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Président Brie (200g)</td>
+            <td class="govuk-table__cell nw">
+              <a target="_blank" href="http://www.trade-tariff.service.gov.uk/search?q=040690">0406 90</a>
+            </td>
+            <td class="govuk-table__cell">France (FR)</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-phase-banner__content__tag govuk-phase-banner__content__tag__green">
+                Accredited
+              </strong>
+            </td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">
+              <a href="">View or edit</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Somerset Brie (180g)</td>
+            <td class="govuk-table__cell nw">
+              <a target="_blank" href="http://www.trade-tariff.service.gov.uk/search?q=040690">0406 90</a>
+            </td>
+            <td class="govuk-table__cell">United Kingdom (GB)</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-phase-banner__content__tag govuk-phase-banner__content__tag__green">
+                Accredited
+              </strong>
+            </td>
+            <td class="govuk-table__cell">
+              <a href="">1 notification</a>
+            </td>
+            <td class="govuk-table__cell">
+              <a href="">View or edit</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Leg of New Zealand lamb (1kg)</td>
+            <td class="govuk-table__cell nw">
+              <a target="_blank" href="http://www.trade-tariff.service.gov.uk/search?q=02042250">0204 2250</a>
+            </td>
+            <td class="govuk-table__cell">New Zealand (NZ)</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-phase-banner__content__tag govuk-phase-banner__content__tag__grey">
+                Unaccredited
+              </strong>
+            </td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">
+              <a href="">View or edit</a><br>
+              <a href="">Request accreditation</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Welsh lamb shoulder (1kg)</td>
+            <td class="govuk-table__cell nw">No commodity code</td>
+            <td class="govuk-table__cell">New Zealand (NZ)</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-phase-banner__content__tag govuk-phase-banner__content__tag__red">
+                Unclassified
+              </strong>
+            </td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">
+              <a href="">View or edit</a><br>
+              <a href="">Classify</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      {% include "partials/filter.html" %}
+      {% include "partials/pagination.html" %}
+      {% include "partials/digital_assistant.html" %}
+
+    </div>
+
+  </div>
+
+{% endblock %}

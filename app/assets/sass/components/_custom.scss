@@ -1,0 +1,36 @@
+.b {
+    font-weight: bold;
+}
+
+.nw {
+    white-space: nowrap;
+}
+
+.govuk-phase-banner__content__tag__grey {
+    background-color: #666 !important
+}
+
+.govuk-phase-banner__content__tag__green {
+    background-color: #283 !important
+}
+.govuk-phase-banner__content__tag__red {
+    background-color: #c22 !important
+}
+
+.govuk-table--s {
+    font-size: 14px !important;
+
+    strong.govuk-tag {
+        font-size: 10px !important;
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .govuk-table--s {
+        font-size: 16px !important;
+
+        strong.govuk-tag {
+            font-size: 12px !important;
+        }
+    }
+}

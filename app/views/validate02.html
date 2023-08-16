@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Validate classification – {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "My products",
+        href: "/products"
+      },
+      {
+        text: "Welsh lamb shoulder (1kg)",
+        href: ""
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+
+      <span class="govuk-caption-xl">{{ serviceName }}</span>
+      <h1 class="govuk-heading-xl">
+        Classify product
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-static-margin-top-6">
+    <div class="govuk-grid-column-three-quarters">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+        Does your good contain any invasive alient species?
+      </h1>
+          </legend>
+          <div id="sign-in-hint" class="govuk-hint">
+      Any goods that feature invasive alient species need to be declared to 8 digits.
+    </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          Yes
+        </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          No
+        </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Continue",
+        href: "/validate03"
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

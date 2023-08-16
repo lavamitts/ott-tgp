@@ -1,0 +1,102 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Classify product – {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "My products",
+        href: "/products"
+      },
+      {
+        text: "Welsh lamb shoulder (1kg)",
+        href: ""
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+
+      <span class="govuk-caption-xl">{{ serviceName }}</span>
+      <h1 class="govuk-heading-xl">
+        Classify product
+      </h1>
+      <p class="govuk-body-l">The Online Tariff shows these results for the terms 'Welsh lamb shoulder (1kg)'</p>
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-static-margin-top-6">
+    <div class="govuk-grid-column-three-quarters">
+
+      <table class="govuk-table search-results">
+        {# <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> #}
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Chapter 2</th>
+            <td class="govuk-table__cell b" colspan="2">Meat and edible offal</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">02 04</th>
+            <td class="govuk-table__cell">Meat of sheep or goats, fresh, chilled or frozen</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">02 04 10</th>
+            <td class="govuk-table__cell">Carcases and half-carcases of lamb, fresh or chilled</td>
+            <td class="govuk-table__cell">
+              <a href="/validate01">Validate</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">02 04 20</th>
+            <td class="govuk-table__cell">Meat of sheep or goats, fresh, chilled or frozen </td>
+            <td class="govuk-table__cell">
+              <a href="/validate01">Validate</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">02 04 30</th>
+            <td class="govuk-table__cell">Other meat of sheep, fresh or chilled</td>
+            <td class="govuk-table__cell">
+              <a href="/validate01">Validate</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">02 04 40</th>
+            <td class="govuk-table__cell">Other meat of sheep, frozen</td>
+            <td class="govuk-table__cell">
+              <a href="/validate01">Validate</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">02 04 50</th>
+            <td class="govuk-table__cell">Meats of goats</td>
+            <td class="govuk-table__cell">
+              <a href="/validate01">Validate</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        <a href="">Search on the Online Tariff</a>
+      </p>
+    </div>
+
+  </div>
+
+{% endblock %}

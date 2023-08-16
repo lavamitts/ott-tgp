@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Validate classification – {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "My products",
+        href: "/products"
+      },
+      {
+        text: "Welsh lamb shoulder (1kg)",
+        href: ""
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+
+      <span class="govuk-caption-xl">{{ serviceName }}</span>
+      <h1 class="govuk-heading-xl">
+        Classify product
+      </h1>
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-static-margin-top-6">
+    <div class="govuk-grid-column-three-quarters">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Classification complete
+        </h1>
+        <div class="govuk-panel__body">
+          Your may use the H8 declaration and the commodity code 0204 10
+          for the movement of this product from GB to Northern Ireland.
+        </div>
+      </div>
+
+      <p>
+        <a href="/products">Back to my products</a>
+      </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}

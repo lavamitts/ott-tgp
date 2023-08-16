@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Notification – {{ serviceName }}
+{% endblock %}
+
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "Notifications",
+        href: "/notifications"
+      },
+      {
+        text: "Notification x",
+        href: "/notification"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+
+      <span class="govuk-caption-xl">{{ serviceName }}</span>
+      <h1 class="govuk-heading-xl">
+        Notification - new commodity code in subheading 040960
+      </h1>
+      <p class="govuk-body">A new measure, of type 'Import control - CITES' has been introduced on commodity
+        <a href="https://trade.tariff-service.gov.uk/search?q=040960">0406 90 10 10</a>. This may impact the categorisation and classification of items in your Goods Profile.
+      </p>
+      <p>Review the information below.</p>
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-static-margin-top-6">
+    <div class="govuk-grid-column-three-quarters">
+
+      <table class="govuk-table">
+        {# <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> #}
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header nw">Notification date</th>
+            <td class="govuk-table__cell">3 October 2024</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Notification</th>
+            <td class="govuk-table__cell">
+              <p>A new measure, of type 'Import control - CITES' has been introduced on commodity
+        <a href="https://trade.tariff-service.gov.uk/search?q=040960">0406 90 10 10</a>
+              </p>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Possible impact</th>
+            <td class="govuk-table__cell">
+              <p>Updates to import measures defined in the Windsor Framework may affect the
+            ability to use the H8 declaration and the usage of short commodity codes.
+          </p>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Goods impacted</th>
+            <td class="govuk-table__cell">
+              <p>
+                <span class="b">0406 90</span><br>Somerset Brie (190g)</p>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+      <button class="govuk-button govuk-!-static-margin-right-3" data-module="govuk-button">
+        Revalidate categorisation
+      </button>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Dismiss notification
+      </button>
+
+    </div>
+
+  </div>
+
+{% endblock %}
